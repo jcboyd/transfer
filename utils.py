@@ -119,7 +119,7 @@ def train_and_test(network, dataset, scale_input, fine_tune, nb_epochs, nb_batch
     net = network(fine_tune, nb_classes).to(device)
 
     optimizer = optim.SGD(filter(lambda p: p.requires_grad, net.parameters()),
-                          lr=0.001, momentum=0.9)
+                          lr=0.001, momentum=0.9, weight_decay=weight_decay)
 
     train_losses, val_losses = [], []
 

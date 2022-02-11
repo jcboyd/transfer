@@ -1,5 +1,11 @@
 # transfer
 
+Transfer learning from ImageNet weights on 6 image datasets. Significant performance gains shown across three axes:
+
+1. Deep (resnet-18) vs. very deep (densenet-161) networks
+2. Freezing vs fine-tuning with a randomly-initialised linear head
+3. Resizing low resolution data to approximate the network's native resolution
+
 | Dataset  | Accuracy (resnet-18 frozen) | Accuracy (resnet-18 fine-tuned) | Accuracy (densenet-161 frozen) | Accuracy (densenet-161 fine-tuned) |
 | --- | --- |--- |--- |--- |
 | MNIST (28 x 28) | 74.54 | 98.81 | - | - |
